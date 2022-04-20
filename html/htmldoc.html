@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head> <!-- Espaço usado para metadata e informação para o navageador e buscadores -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css" />
+    
     <title>Estudos de HTML</title>
 </head>
 <body> <!-- Espaço usado para conteúdo -->
     <header> 
+        <figure>
+            <img src="https://via.placeholder.com/1000x10" width=1000 height=10 alt="Placeholder no header" />
+        </figure>
         <h1> Estudos de HTML 5 </h1>
             <nav>
                 <ol>
                     <li><a href="#tagsEstruturais"> Tags Estruturais</a></li>
                     <li><a href="#tagsTextuais"> Tags Textuais</a></li>
-                    <li><a href="#tagsEventos">Tags de Evento</a></li>
+                    <li><a href="#tagsArqEvts">Tags de Arquivo e Interação</a></li>
+                    <li><a href="#css">CSS</a></li>
                 </ol>
             </nav>
     </header>
@@ -62,33 +68,33 @@
                 Tags textuais para HTML 5
             </h3>
             <section id="tagHx">
-                <h4>Tags h1~h6</h4>
+                <h4>Tags H1~H6</h4>
                 <p> As tags de h1 a h6 são tags que indicam o título e o subtítulo de um texto.
                     Elas são especialmente importantes quando levamos em consideração a hierarquia da informação 
                     que você está usando na sua página.
                 </p>
             </section>
             <section id="tagP">
-                <h4>Tag p</h4>
+                <h4>Tag P</h4>
                 <p> A tag p organiza seu conteúdo em um parágrafo dentro do texto.
                 </p>
             </section>
             <section id="tagBr">
-                <h4>Tag br</h4>
+                <h4>Tag Br</h4>
                 <p>A tag br representa uma quebra de linha, sendo uma tag que pode ser autocontida. Ela força uma 
                     quebra de linha no texto, fazendo com o que o texto continue na linha seguinte independentemente de onde
                     esteja.
                 </p>
             </section>
             <section id="tagA">
-                <h4>Tag A/Link</h4>
+                <h4>Tag A</h4>
                 <p>A tag "a", também chamada de tag âncora, dá as propriedades de um link para o conteúdo dentro
-                    dela, seja texto ou imagem. Esse link pode tanto mover o usuário dentro dos arquivos e ids do site
-                    quanto para fora dele.
+                    dela, seja texto ou imagem. Você cria o link através do atributo href dentro da tag, onde você 
+                    pode navegar tanto nos documentos locais, quanto no documento atual ou indo para fora do seu site.
                 </p>
             </section>
             <section id="tagUlOl">
-                <h4>Tags ul e ol</h4>
+                <h4>Tags Ul e Ol</h4>
                 <p>Essas tags nos permitem usar listas para organizar nossa informação, seja de forma 
                     desordenada ou ordenada. Listas podem conter tanto texto quanto imagem.
                 </p>
@@ -97,32 +103,85 @@
                 <h4>Tag Table</h4>
                 <p>Essa tag gera uma tabela, permitindo que sejam feitos registros tabulados. Antigamente se aproveitava
                     da sua organização para construir o layout dos sites. Você pode usar rowspan e colspan para combinar 
-                    suas células.
+                    suas células. A tag table possui algumas tags internas para sua organização:</p>
+                    <ul>
+                        <li>Caption - O título da tabela</li>
+                        <li>Thead - O cabeçalho da tabela, é preenchido com a tag th</li>
+                        <li>Tbody - O corpo da tabela. Onde você pode usar a tag tr para criar uma linha 
+                            e a tag td para criar uma célula.
+                        </li>
+                        <li>Tfooter - Funciona como o rodapé da tabela, serve para tabelas que fiquem grandes
+                            demais
+                        </li>
+                    </ul>             
+            </section>
+        </article>
+        <article id="tagsArqEvts">
+            <h3>Tags de Arquivo</h3>
+            <section id="tagImg">
+                <h4>Tag Img</h4>
+                <p>Tag para inserir imagens no seu documento. É uma tag autofechada, onde eu posso definir 
+                    a fonte e seu tamanho. Você pode usar tanto uma imagem local quanto online.
+                </p>
+            </section>
+            <section id="tagFig">
+                <h4>Tag Figure</h4>
+                <p>Tag para dar destaque a um conteúdo independentemente de ser imagem, texto, ou vídeo.
+                </p>
+            </section>
+            <section id="tagForm">
+                <h4>Tag Form</h4>
+                <p>Tag de interação que permite o usuário da página enviar informação para o site. Quando usando 
+                    essa tag você precisa escolher quais serão os formatos usados no input do usuário através
+                     do input type, a forma de transmissão da informação através do method e se essa pesquisa 
+                     vai ser enviada para outro canto através do action.
                 </p>
             </section>
         </article>
+        <article id="css">
+            <h3>CSS</h3>
+            <section id="usoCSS">
+                <h4>Usos do CSS</h4>
+                <p>O CSS veio para normatizar a estilização dos sites. Dentro dele nós usamos seletores para 
+                    escolher um pedaço do nosso documento e blocos de instrução para modifica-lo. Nós temos 3
+                    formas de aplicar o css ao HTML:
+                </p>
+                <ul>
+                    <li>Inline (Tag Style) - Para elementos isolados ou corner cases do documento.</li>
+                    <li>Stylesheet Externa - Serve para aplicar o mesmo CSS para diversas páginas HTML.</li>
+                    <li>Stylesheet Interna - Normalmente usada quando o CSS de uma página vai ser mais único.</li>
+                </ul>
+            </section>
+        </article>
     </main>
-    <aside>
+    <aside id="asideEsq">
         Espaço de teste para a tag Aside.
         <table>
             <caption><h3>Tipos de Tag</h3></caption>
             <thead>
-                <th><a href="#tagsEstruturais">Tags Estruturais</a></th>
-                <th><a href="#tagsTextuais">Tags Textuais</a></th>
-                <th><a href="#tagsEventos">Tags de Evento</a></th>
+                <tr>
+                    <th><a href="#tagsEstruturais">Tags Estruturais</a></th>
+                    <th><a href="#tagsTextuais">Tags Textuais</a></th>
+                    <th><a href="#tagsArqEvts">Tags de Arquivo e Interação</a></th>
+                    <th><a href="#css">CSS</a></th>
+                </tr>
             </thead>
             <tbody>
                 <tr>
                     <td><a href="#tagMain">Principal</a></td>
                     <td><a href="#tagHx">Títulos</a></td>
+                    <td><a href="#tagImg">Imagens</a></td>
+                    <td><a href="#usoCSS">Usos do CSS</a></td>
                 </tr>
                 <tr>
                     <td><a href="#tagHeaderFooter">Cabeçalho e Rodapé</a></td>
                     <td><a href="#tagP">Parágrafo</a></td>
+                    <td><a href="#tagFig">Figura</a></td>
                 </tr>
                 <tr>
                     <td><a href="#tagSection">Seção</a></td>
                     <td><a href="#tagBr">Quebra de Linha</a></td>
+                    <td><a href="#tagForm">Formulários</a></td>
                 </tr>
                 <tr>
                     <td><a href="#tagArticle">Artigo</a></td>
@@ -142,13 +201,22 @@
             </tbody>
         </table>
     </aside>
+    <aside id="asideDir">
+        <form method="get" action="https://google.com/search">
+            <p>Barra de Pesquisa
+            <input type="text" name="q" /></p>
+        </form>
+    </aside>
     <footer>
         <nav>
             <a href="https://www.linkedin.com/in/jeduardodantas/">LinkedIn</a>
             <a href="https://github.com/jedudantas">GitHub</a>
             <a href="https://jedudantas.github.io/">Site Pessoal</a>
         </nav>
-        &copy; 2022 - João Eduardo Fernandes Dantas
+        &copy; 2022 - João Eduardo Fernandes Dantas <br>
+        <figure>
+            <img src="https://via.placeholder.com/1000x10" width=1000 height=10 alt="Placeholder no footer"/>
+        </figure>
     </footer>
 </body>
 </html>
