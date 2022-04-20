@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <!-- Espaço usado para metadata e informação para o navageador e buscadores -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos de HTML</title>
+</head>
+<body> <!-- Espaço usado para conteúdo -->
+    <header> 
+        <h1> Estudos de HTML 5 </h1>
+            <nav>
+                <ol>
+                    <li><a href="#tagsEstruturais"> Tags Estruturais</a></li>
+                    <li><a href="#tagsTextuais"> Tags Textuais</a></li>
+                    <li><a href="#tagsEventos">Tags de Evento</a></li>
+                </ol>
+            </nav>
+    </header>
+    <main>
+        <article id="tagsEstruturais">
+            <h3>
+                Tags estruturais e genéricas para HTML 5
+            </h3>
+            <section id="tagMain">
+                <h4>Tag Main</h4>
+                <p> A tag main tem como função agrupar e marcar o conteúdo principal da página que você está lendo nesse
+                    momento. Normalmente ele é um item único, cada página tem seu próprio main.</p>
+            </section>
+            <section id="tagHeaderFooter">
+                <h4>Tags Header e Footer</h4>
+                <p>A tag header é um cabeçalho da página, enquanto o footer é um rodapé. 
+                    Suas funções estruturais são especialmente úteis para organizar o seu conteúdo.</p>
+            </section>
+            <section id="tagSection">
+                <h4>Tag Section</h4>
+                <p> A tag section gera um pedaço genérico de divisória dentro do conteúdo. Tecnicamente falando
+                tudo o que vimos até agora são sections.</p>
+            </section>
+            <section id="tagArticle">
+                <h4>Tag Article</h4>
+                <p> A tag article é uma tag genérica que é autossuficiente. Sua principal função é separar por 
+                valor semântico. Uma outra forma de interpretar é como um modelo de seção, como artigos num blog.</p>
+            </section>
+            <section id="tagNav">
+                <h4>Tag Nav</h4>
+                <p> A tag nav cria menus de navegação para dentro e fora do site.</p>
+            </section>
+            <section id="tagAside">
+                <h4>Tag Aside</h4>
+                <p> A tag aside cria um espaço onde podemos usar informação superflua para o conteúdo.</p>
+            </section>
+            <section id="tagDivSpan">
+                <h4>Tags Div e Span</h4>
+                <p> Div e Span são tags estruturais usadas para organizar sua página. Divs podem substituir qualquer
+                seção da sua página, criando um bloco de conteúdo. li/lis são pedaços de conteúdo que você quer 
+                separar sem perder o fluxo do texto.</p>
+            </section>
+        </article>
+        <article id="tagsTextuais">
+            <h3>
+                Tags textuais para HTML 5
+            </h3>
+            <section id="tagHx">
+                <h4>Tags h1~h6</h4>
+                <p> As tags de h1 a h6 são tags que indicam o título e o subtítulo de um texto.
+                    Elas são especialmente importantes quando levamos em consideração a hierarquia da informação 
+                    que você está usando na sua página.
+                </p>
+            </section>
+            <section id="tagP">
+                <h4>Tag p</h4>
+                <p> A tag p organiza seu conteúdo em um parágrafo dentro do texto.
+                </p>
+            </section>
+            <section id="tagBr">
+                <h4>Tag br</h4>
+                <p>A tag br representa uma quebra de linha, sendo uma tag que pode ser autocontida. Ela força uma 
+                    quebra de linha no texto, fazendo com o que o texto continue na linha seguinte independentemente de onde
+                    esteja.
+                </p>
+            </section>
+            <section id="tagA">
+                <h4>Tag A/Link</h4>
+                <p>A tag "a", também chamada de tag âncora, dá as propriedades de um link para o conteúdo dentro
+                    dela, seja texto ou imagem. Esse link pode tanto mover o usuário dentro dos arquivos e ids do site
+                    quanto para fora dele.
+                </p>
+            </section>
+            <section id="tagUlOl">
+                <h4>Tags ul e ol</h4>
+                <p>Essas tags nos permitem usar listas para organizar nossa informação, seja de forma 
+                    desordenada ou ordenada. Listas podem conter tanto texto quanto imagem.
+                </p>
+            </section>
+            <section id="tagTable">
+                <h4>Tag Table</h4>
+                <p>Essa tag gera uma tabela, permitindo que sejam feitos registros tabulados. Antigamente se aproveitava
+                    da sua organização para construir o layout dos sites. Você pode usar rowspan e colspan para combinar 
+                    suas células.
+                </p>
+            </section>
+        </article>
+    </main>
+    <aside>
+        Espaço de teste para a tag Aside.
+        <table>
+            <caption><h3>Tipos de Tag</h3></caption>
+            <thead>
+                <th><a href="#tagsEstruturais">Tags Estruturais</a></th>
+                <th><a href="#tagsTextuais">Tags Textuais</a></th>
+                <th><a href="#tagsEventos">Tags de Evento</a></th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#tagMain">Principal</a></td>
+                    <td><a href="#tagHx">Títulos</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#tagHeaderFooter">Cabeçalho e Rodapé</a></td>
+                    <td><a href="#tagP">Parágrafo</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#tagSection">Seção</a></td>
+                    <td><a href="#tagBr">Quebra de Linha</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#tagArticle">Artigo</a></td>
+                    <td><a href="#tagA">Âncora de Link</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#tagNav">Navegação</a></td>
+                    <td><a href="#tagUlOl">Listas</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#tagAside">Lateral</a></td>
+                    <td><a href="#tagTable">Tabela</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#tagDivSpan">Div e Span</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </aside>
+    <footer>
+        <nav>
+            <a href="https://www.linkedin.com/in/jeduardodantas/">LinkedIn</a>
+            <a href="https://github.com/jedudantas">GitHub</a>
+            <a href="https://jedudantas.github.io/">Site Pessoal</a>
+        </nav>
+        &copy; 2022 - João Eduardo Fernandes Dantas
+    </footer>
+</body>
+</html>
