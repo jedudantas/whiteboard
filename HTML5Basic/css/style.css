@@ -1,0 +1,21 @@
+*{
+    font-family: Helvetica, Arial, sans-serif;
+    color: rgb(179, 135, 221);
+    background-color: #221d2b;
+    
+}
+
+p{
+    text-indent: 1rem;
+}
+
+h1{
+    text-align: center;
+}
+
+.asideEsq{
+    display: block;
+    width: fit-content;
+    height: 30px;
+    border: red 10px 10px 10px 10px;
+}
