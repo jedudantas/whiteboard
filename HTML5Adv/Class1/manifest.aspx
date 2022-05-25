@@ -6,7 +6,7 @@ events.aspx
 update-manual.aspx 
 update-automatic.aspx 
 scripts/jquery-1.5.1.min.js 
-offline.js 
+scripts/offline.js 
 global-css.aspx 
 
 <%@ Page

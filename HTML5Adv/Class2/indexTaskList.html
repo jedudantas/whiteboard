@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Storage: Using Local Storage</title>
+    <style>
+        textarea{
+            font-family: Arial, Helvetica, sans-serif;
+            width: 500px;
+            height: 200px;
+            display: block;
+            margin-bottom: 25px;
+        }
+
+        #messageContainer{
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Using Local Storage</h1>
+        <h2>Task List</h2>
+        <div id="messageContainer"><span id="msg"></span></div>
+        <textarea id="taskBox" autofocus></textarea>
+        <button id="saveButton">Save</button>
+        <a href="javascript:void(0);" id="deleteAllLink">Delete</a>
+    </div>
+</body>
+<script src="scripts/jquery-1.5.1.min.js"></script>
+<script>
+    var tasksBox, msg;
+
+    $(function(){
+        tasksBox = $("tasksBox");
+        msg = $("msg");
+
+        if(window.localStorage){
+            if(window.localStorage.taskList !=null){
+                var tasks = window.localStorage.taskList;
+                var taskList = tasks.split(",").join("\n");
+                tasksBox.val(taskList);
+            }
+        }
+
+        $("#saveButton").click(function (){
+            save();
+            showMessage("Saved");
+        });
+
+        $("#deleteAllLink").click(function(){
+            window.localStorage.removeItem("taskList");
+            tasksBox.val(" ");
+            showMessage("Deleted");
+        });
+    });
+
+    function save(){
+        var tasks = tasksBox.val();
+        var taskList = tasks.split("\n").join(",");
+        window.localStorage.taskList = taskList;
+    }
+
+    function showMessage(message){
+        msg.html(message);
+        msg.fadeOut(1000);
+    }
+</script>
+</html>
