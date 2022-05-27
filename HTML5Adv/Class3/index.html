@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Persistent Form</title>
+</head>
+<body>
+    <article class="container">
+        <div class="well">
+            <form>
+                <input type="radio" id="localStorage" name="storage-strategy" value="0" checked> <label for="localStorage"><code>localStorage</code></label>
+                <input type="radio" id="sessionStorage" name="storage-strategy" value="1"> <label for="sessionStorage"><code>sessionStorage</code></label>
+            </form>
+        </div>
+
+        <div id="msg-container" class="alert alert-info">
+            <span id="msg" class="text-muted"></span>
+        </div>
+        <h1>Add Home</h1>
+        <form id="add-home-form" name="add-home-form" class="form-horizontal">
+            <fieldset>
+                <legend>Add a new home for listing</legend>
+                <div class="form-group">
+                    <div class="col-sm-2">
+                        <label for="address-box" class="control-label">Address</label>
+                    </div>
+                    <div class="col-sm-9">
+                        <input type="text" id="address-box" name="address-box"
+                        autofocus required
+                        class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-2">
+                        <label for="city-box" class="control-label">City</label>
+                    </div>
+                    <div class="col-sm-9">
+                        <input type="text" id="city-box" name="city-box"
+                        required
+                        class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-2">
+                        <label for="state-box" class="control-label">State</label>
+                    </div>
+                    <div class="col-sm-9">
+                        <input type="text" id="state-box" name="state-box"
+                         required
+                        class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-2">
+                        <label for="zipcode-box" class="control-label">Zip Code</label>
+                    </div>
+                    <div class="col-sm-9">
+                        <input type="number" id="zipcode-box" name="zipcode-box"
+                        min="0" max="99999999"
+                         required
+                        class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-2">
+                        <label for="comments-box" class="control-label">Comments</label>
+                    </div>
+                    <div class="col-sm-9">
+                        <textarea
+                        id="comments-box" name="comments-box"
+                        required
+                        class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-2">
+                        <input type="button"
+                            id="add-home-button" name="add-home-button"
+                            value="Send" class="btn-default">      
+                        </div>
+                </div>
+            </fieldset>
+        </form>
+    </article>
+    <script src="localDataService.js"></script>
+    <script src="viewModel.js"></script>
+</body>
+</html>

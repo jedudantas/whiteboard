@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+</head>
+<body>
+
+    <p>Hello World</p>
+
+    <script src="./indexDB/create.js"></script>
+    <script src="./indexDB/crud.js"></script>
+    <script src="./indexDB/delRequest.js"></script>
+    <script src="./indexDB/openRequest.js"></script>
+    <script>
+        var openDatabase = function (){
+            var openRequest = indexedDB.open(db.name, db.version);
+
+            openRequest.onupgradeneeded = function (e){
+                var newVersion = e.target.result;
+                if(!newVersion.objectStoreNames.contains(db.storeNames.courses)){
+                    $$result.log('Creating <code>courses</code> store');
+                    newVersion.createObjectStore(db.storeNames.courses, {autoIncrement: true});
+                }
+            };
+
+            db.setDefaultErrorHandler(openRequest);
+            openRequest.onsuccess = function(e){
+                db.instance = e.target.result;
+                $$result.log('The <code>'+db.name+'</code> database opened');
+            };
+        };
+
+        openDatabase();
+
+    </script>
+</body>
+</html>

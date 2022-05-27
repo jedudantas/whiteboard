@@ -1,0 +1,24 @@
+header {
+    margin-top: 10px;
+}
+
+textarea {
+    min-height: 200px;
+}
+
+label {
+    font-weight: normal;
+}
+
+#state-box {
+    width: 90px;
+}
+
+#msg-container {
+    position: relative;
+    min-height: 55px;
+}
+
+#msg {
+    display: none;
+}
