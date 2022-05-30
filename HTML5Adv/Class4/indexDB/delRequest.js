@@ -8,3 +8,4 @@ if(typeof initDB !== 'undefined'){
         $$result.log('Database deleted');
     };
 };
+

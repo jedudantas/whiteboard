@@ -1,0 +1,27 @@
+AND 
+OR 
+NO 
+IF
+FOR
+WHILE
+
+
+CREATE
+READ
+UPDATE
+DELETE
+
+var A number = 3;
+var B number = 5;
+
+var door; //OPEN, CLOSED, LOCKED, UNLOCKED
+var action;
+var item;
+
+if(door == CLOSED && action == OPEN DOOR){
+    door = OPEN;
+} else if(door == OPEN) {
+    WRITE('The door is open already')
+} else {
+    WRITE('The door is closed, there are no paths for you')
+}
