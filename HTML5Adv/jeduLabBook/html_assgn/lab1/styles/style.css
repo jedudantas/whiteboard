@@ -1,0 +1,25 @@
+h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+#title {
+    margin-bottom: 5em;
+}
+
+#info {
+    border-bottom: 2px solid gray;
+}
+
+#info p {
+    font-style: italic;
+    
+}
+
+#qualification{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#qualification td{
+    width: max-content;
+}
