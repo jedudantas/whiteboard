@@ -25,3 +25,11 @@ if(door == CLOSED && action == OPEN DOOR){
 } else {
     WRITE('The door is closed, there are no paths for you')
 }
+
+inv = [Poção, Óleo, Ácido, Elmo, Escudo, Luva],
+
+Event search {
+    if(item == onTheGround){
+        insert item > inv;
+    }
+}
